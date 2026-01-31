@@ -1,0 +1,45 @@
+{
+  "name": "parse_json_file",
+  "description": "Read and parse JSON files with error handling and validation",
+  "category": "file_operations",
+  "version": "1.0.0",
+  "author": "Claude Skills Library",
+  "license": "MIT",
+  "tags": ["json", "file", "parsing", "data"],
+  "parameters": [
+    {
+      "name": "file_path",
+      "type": "string",
+      "required": true,
+      "description": "Path to the JSON file to parse"
+    },
+    {
+      "name": "encoding",
+      "type": "string",
+      "required": false,
+      "default": "utf-8",
+      "description": "File encoding"
+    },
+    {
+      "name": "strict",
+      "type": "boolean",
+      "required": false,
+      "default": true,
+      "description": "Whether to use strict JSON parsing"
+    }
+  ],
+  "returns": {
+    "type": "object",
+    "description": "Parsed JSON data as a Python dictionary or list"
+  },
+  "dependencies": ["json (Python standard library)"],
+  "examples": [
+    {
+      "description": "Parse a simple JSON file",
+      "input": {
+        "file_path": "data.json"
+      },
+      "output": {"key": "value"}
+    }
+  ]
+}
