@@ -11,6 +11,42 @@ This library provides a collection of well-documented, modular skills that AI ag
 - **Tested**: Reliable and production-ready
 - **Standardized**: Follows consistent formatting and structure
 
+## Quick Start
+
+### Browse Skills
+
+Use the interactive skill browser:
+```bash
+python browse_skills.py
+```
+
+Or explore the [skills directory](skills/) manually.
+
+### Using a Skill
+
+1. Navigate to the skill directory (e.g., `skills/text_processing/extract_emails/`)
+2. Read the `README.md` for documentation
+3. Review `skill.json` for metadata and parameters
+4. Import and use the implementation:
+
+```python
+# Example: Using the extract_emails skill
+from skills.text_processing.extract_emails.implementation import extract_emails
+
+text = "Contact us at support@example.com or sales@example.com"
+emails = extract_emails(text)
+print(emails)  # ['support@example.com', 'sales@example.com']
+```
+
+### Available Skills
+
+- **[extract_emails](skills/text_processing/extract_emails/)** - Extract email addresses from text
+- **[parse_json_file](skills/file_operations/parse_json_file/)** - Parse JSON files with error handling
+- **[http_request](skills/api_integration/http_request/)** - Make HTTP requests to APIs
+- **[csv_to_json](skills/data_processing/csv_to_json/)** - Convert CSV data to JSON format
+
+See the full [skills catalog](skills/catalog.json) for details.
+
 ## Skills Categories
 
 ### 📊 Data Processing
