@@ -1,0 +1,38 @@
+{
+  "name": "extract_emails",
+  "description": "Extract email addresses from text using regular expressions",
+  "category": "text_processing",
+  "version": "1.0.0",
+  "author": "Claude Skills Library",
+  "license": "MIT",
+  "tags": ["email", "regex", "text", "parsing"],
+  "parameters": [
+    {
+      "name": "text",
+      "type": "string",
+      "required": true,
+      "description": "The text to extract email addresses from"
+    },
+    {
+      "name": "unique",
+      "type": "boolean",
+      "required": false,
+      "default": true,
+      "description": "Whether to return only unique email addresses"
+    }
+  ],
+  "returns": {
+    "type": "array",
+    "description": "Array of email addresses found in the text"
+  },
+  "dependencies": ["re (Python standard library)"],
+  "examples": [
+    {
+      "description": "Extract emails from a simple text",
+      "input": {
+        "text": "Contact us at support@example.com or sales@example.com"
+      },
+      "output": ["support@example.com", "sales@example.com"]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "name": "csv_to_json",
+  "description": "Convert CSV data to JSON format with customizable options",
+  "category": "data_processing",
+  "version": "1.0.0",
+  "author": "Claude Skills Library",
+  "license": "MIT",
+  "tags": ["csv", "json", "conversion", "data", "transformation"],
+  "parameters": [
+    {
+      "name": "csv_data",
+      "type": "string",
+      "required": true,
+      "description": "CSV data as a string"
+    },
+    {
+      "name": "delimiter",
+      "type": "string",
+      "required": false,
+      "default": ",",
+      "description": "CSV delimiter character"
+    },
+    {
+      "name": "has_header",
+      "type": "boolean",
+      "required": false,
+      "default": true,
+      "description": "Whether the CSV has a header row"
+    }
+  ],
+  "returns": {
+    "type": "array",
+    "description": "Array of JSON objects representing CSV rows"
+  },
+  "dependencies": ["csv (Python standard library)"],
+  "examples": [
+    {
+      "description": "Convert simple CSV to JSON",
+      "input": {
+        "csv_data": "name,age\\nJohn,30\\nJane,25"
+      },
+      "output": [
+        {"name": "John", "age": "30"},
+        {"name": "Jane", "age": "25"}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "library": {
+    "name": "Claude Skills Library",
+    "version": "1.0.0",
+    "description": "A comprehensive library of reusable skills for AI agents",
+    "url": "https://github.com/deshpandetanmay/claude-skills",
+    "license": "MIT"
+  },
+  "categories": [
+    {
+      "name": "data_processing",
+      "display_name": "Data Processing",
+      "description": "Skills for manipulating, transforming, and analyzing data",
+      "icon": "📊"
+    },
+    {
+      "name": "web_automation",
+      "display_name": "Web Automation",
+      "description": "Skills for web scraping, browser automation, and web interactions",
+      "icon": "🌐"
+    },
+    {
+      "name": "file_operations",
+      "display_name": "File Operations",
+      "description": "Skills for file management, reading, writing, and processing files",
+      "icon": "📁"
+    },
+    {
+      "name": "text_processing",
+      "display_name": "Text Processing",
+      "description": "Skills for text manipulation, parsing, and natural language processing",
+      "icon": "📝"
+    },
+    {
+      "name": "api_integration",
+      "display_name": "API Integration",
+      "description": "Skills for interacting with external APIs and services",
+      "icon": "🔌"
+    }
+  ],
+  "skills": [
+    {
+      "id": "extract_emails",
+      "name": "Extract Emails",
+      "category": "text_processing",
+      "description": "Extract email addresses from text using regular expressions",
+      "path": "skills/text_processing/extract_emails",
+      "version": "1.0.0",
+      "tags": ["email", "regex", "text", "parsing"],
+      "difficulty": "easy",
+      "language": "python"
+    },
+    {
+      "id": "parse_json_file",
+      "name": "Parse JSON File",
+      "category": "file_operations",
+      "description": "Read and parse JSON files with error handling and validation",
+      "path": "skills/file_operations/parse_json_file",
+      "version": "1.0.0",
+      "tags": ["json", "file", "parsing", "data"],
+      "difficulty": "easy",
+      "language": "python"
+    },
+    {
+      "id": "http_request",
+      "name": "HTTP Request",
+      "category": "api_integration",
+      "description": "Make HTTP requests with support for various methods, headers, and authentication",
+      "path": "skills/api_integration/http_request",
+      "version": "1.0.0",
+      "tags": ["http", "api", "request", "rest", "web"],
+      "difficulty": "medium",
+      "language": "python",
+      "external_dependencies": ["requests"]
+    },
+    {
+      "id": "csv_to_json",
+      "name": "CSV to JSON",
+      "category": "data_processing",
+      "description": "Convert CSV data to JSON format with customizable options",
+      "path": "skills/data_processing/csv_to_json",
+      "version": "1.0.0",
+      "tags": ["csv", "json", "conversion", "data", "transformation"],
+      "difficulty": "easy",
+      "language": "python"
+    }
+  ],
+  "stats": {
+    "total_skills": 4,
+    "categories": 5,
+    "languages": ["python"],
+    "last_updated": "2026-01-31"
+  }
+}

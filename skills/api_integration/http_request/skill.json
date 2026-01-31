@@ -1,0 +1,68 @@
+{
+  "name": "http_request",
+  "description": "Make HTTP requests with support for various methods, headers, and authentication",
+  "category": "api_integration",
+  "version": "1.0.0",
+  "author": "Claude Skills Library",
+  "license": "MIT",
+  "tags": ["http", "api", "request", "rest", "web"],
+  "parameters": [
+    {
+      "name": "url",
+      "type": "string",
+      "required": true,
+      "description": "The URL to make the request to"
+    },
+    {
+      "name": "method",
+      "type": "string",
+      "required": false,
+      "default": "GET",
+      "description": "HTTP method (GET, POST, PUT, DELETE, PATCH)"
+    },
+    {
+      "name": "headers",
+      "type": "object",
+      "required": false,
+      "default": {},
+      "description": "HTTP headers as key-value pairs"
+    },
+    {
+      "name": "data",
+      "type": "object",
+      "required": false,
+      "description": "Request body data (for POST, PUT, PATCH)"
+    },
+    {
+      "name": "params",
+      "type": "object",
+      "required": false,
+      "description": "URL query parameters"
+    },
+    {
+      "name": "timeout",
+      "type": "number",
+      "required": false,
+      "default": 30,
+      "description": "Request timeout in seconds"
+    }
+  ],
+  "returns": {
+    "type": "object",
+    "description": "Response object containing status_code, headers, and body"
+  },
+  "dependencies": ["requests"],
+  "examples": [
+    {
+      "description": "Make a simple GET request",
+      "input": {
+        "url": "https://api.example.com/data",
+        "method": "GET"
+      },
+      "output": {
+        "status_code": 200,
+        "body": {"data": "response"}
+      }
+    }
+  ]
+}
